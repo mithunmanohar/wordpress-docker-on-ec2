@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+
+  wordpress:
+    build:
+      context: wordpress
+    ports:
+      - '80:80'
+      - '443:443'
+    networks:
+      - webnet
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: mysql:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+
+
+  mysql:
+    image: mysql:5.7
+    ports:
+      - '3306:3306'
+    networks:
+      - webnet
+    restart: always
+
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      
+networks:
+  webnet:
+volumes:
+    db_data: {}
+
