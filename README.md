@@ -1,4 +1,4 @@
-# worpress-installation-on-ec2
+# wordpress-installation-on-ec2
 
 ### Setup wordpress website on ec2 machine in single step.
 
