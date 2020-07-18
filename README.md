@@ -1,6 +1,6 @@
-# wordpress-installation-on-ec2
+# wordpress-setup-on-ec2
 
-### Setup wordpress website on ec2 machine in single step.
+### Setup wordpress website on ec2 machine in single step using Docker and docker-compose
 
 - Clone the repo
 - Run `./setup.sh`
